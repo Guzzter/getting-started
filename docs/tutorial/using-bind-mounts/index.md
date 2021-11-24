@@ -53,6 +53,12 @@ So, let's do it!
         node:12-alpine `
         sh -c "yarn install && yarn run dev"
     ```
+    
+    If you are using Windows Command Line then use this command.
+    
+    ```cmd
+    docker run -dp 3000:3000 -w /app -v "%cd%:/app" node:12-alpine sh -c "yarn install && yarn run dev"
+    ```
 
     - `-dp 3000:3000` - same as before. Run in detached (background) mode and create a port mapping
     - `-w /app` - sets the container's present working directory where the command will run from
